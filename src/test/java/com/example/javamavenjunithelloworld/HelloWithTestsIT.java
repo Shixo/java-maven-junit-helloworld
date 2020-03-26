@@ -44,4 +44,15 @@ public class HelloWithTestsIT {
         String thrice = String.format("%1$s%2$s%1$s%2$s%1$s%2$s", Hello.HELLO, System.lineSeparator());
         assertThat(out.toString(), is(thrice));
     }
+
+     @Test
+    public void doesItSayHelloTestWithEmpty() {
+        String[] args = {};
+        HelloApp.main(args);
+        // Hello
+        // Hello
+        // Hello
+        String thrice = String.format("%1$s%2$s%1$s%2$s%1$s%2$s", Hello.HELLO, System.lineSeparator());
+        assertThat(out.toString(), is(thrice));
+    }
 }
